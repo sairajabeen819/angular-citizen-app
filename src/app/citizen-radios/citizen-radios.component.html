@@ -1,0 +1,50 @@
+<header class="container-fluid">
+  <nav class="row header-area">
+    <div class="container header-content">
+      <h1 class="logo">
+        <img src="../../assets/images/logo-citizens__horz-deepGreen.png" alt="Citizens Logo">
+      </h1>
+    </div>
+  </nav>
+
+</header>
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h2 class="main-heading">Trouble Logging In?</h2>
+        <form action="#">
+
+          <fieldset class="radios-holder" role="radiogroup">
+            <legend>Please select the reason you are unable to log in.</legend>
+            <label aria-labelledby="forgetPass" class="radio-label" *ngFor="let radioLabel of checkboxes">
+              <span>{{ radioLabel.label }}</span>
+              <input type="radio" name="radioCheck" (change)="changeEvent($event)">
+              <span class="checkmark"></span>
+            </label>
+          </fieldset>
+
+          <div class="btns-holder">
+            <button id="continueBtn" class="btn btn-continue" [disabled]="toggleBool">Continue</button>
+            <button class="btn btn-cancel" (click)="clearRadios()" type="reset">Cancel</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="column footer-content">
+        <h3>Need Assistance?</h3>
+        <p>If you are experiencing a problem not covered above, please contact Client Services at 877-550-5933
+          or email us at <a href="mailto:clientservices@citizensbank.com">clientservices@citizensbank.com</a>
+          Monday through Friday, 7 am - 7 pm ET.</p>
+      </div>
+    </div>
+  </div>
+</footer>
